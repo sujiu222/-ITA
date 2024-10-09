@@ -28,7 +28,7 @@
           <a href="#" class="about-button" @click="scrollSmooth">下滑查看更多 ↓</a>
         </div>
       </div>
-      <a href="#">
+      <a href="#" class="about-img">
         <img class="jpg" src="C:\Users\苏九\Desktop\code\图片\32FE051CD51432A610DD3CDCD35376D5.jpg" alt="此处应该有图片">
       </a>
     </div>
@@ -59,7 +59,7 @@
 
 
 
-    <div class="product-group" id="团队" ref="productGroup">
+    <div class="product-group" id="团队" ref="productGroup" style=" margin-left: 12%;">
       <h2 class="group-title">专业团队 </h2>
       <span class="group-description">现在ITA前线成员</span>
       <div class="group-items">
@@ -481,6 +481,8 @@ const ymbhp = () => {
 }
 
 div.product-group {
+
+  justify-content: center;
   min-width: 1186.44px;
   /* 设置固定的最小高度 */
   height: auto;
@@ -727,9 +729,20 @@ img.content2-img {
 }
 
 @media (max-width: 600px) {
+
   .content1 {
     flex-direction: column;
     align-items: center;
+  }
+
+  div.text-content {
+    width: 350px;
+    font-size: 13px;
+  }
+
+  div.content2 {
+    width: 400px;
+    height: auto;
   }
 
   .left_title {
@@ -739,8 +752,14 @@ img.content2-img {
     /* 居中对齐 */
   }
 
-  .jpg {
-    width: 80%;
+  div.group-items {
+    flex-direction: column;
+  }
+
+
+
+  img.jpg {
+    width: 300px;
     height: auto;
     /* 保证图片缩放比例 */
     margin: 10px 0;
@@ -748,14 +767,13 @@ img.content2-img {
   }
 
   .about-button {
+    margin: auto;
     width: 100%;
     font-size: 1rem;
     /* 调整按钮字体大小 */
   }
 
   .group-items {
-    display: flex;
-    flex-direction: column;
     align-items: center;
     /* 居中对齐 */
   }
@@ -780,6 +798,7 @@ img.content2-img {
 
   .group-info {
     text-align: center;
+
     /* 信息居中 */
   }
 
@@ -790,6 +809,12 @@ img.content2-img {
     /* 内边距调整 */
     font-size: 1rem;
     /* 调整字体大小 */
+  }
+
+  .index .content1 a .jpg {
+    width: 300px;
+    height: auto;
+    margin: 10px 0;
   }
 
 }
